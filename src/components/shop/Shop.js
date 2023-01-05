@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import useProducts from '../../hooks/useProducts';
 import { addToDb, getStoredCart } from '../../utilities/fakedb';
 import Cart from '../cart/Cart';
 import Product from '../product/Product';
@@ -7,16 +9,7 @@ import '../shop/Shop.css'
 
 
 const Shop = () => {
-    const [products, setProducts] = useState([])
-
-    useEffect(() => {
-        fetch("products.json")
-            .then(res => res.json())
-            .then(data => {
-                setProducts(data)
-
-            });
-    }, [])
+    const [products, setProducts] = useProducts()
 
     useEffect(() => {
         const storedCart = getStoredCart();
@@ -64,7 +57,11 @@ const Shop = () => {
                     products.map(product => <Product product={product} addToCart={addToCart}></Product>)
                 }
             </div>
-            <Cart cart={cart}></Cart>
+            <Cart cart={cart}>
+                <button>
+                    <Link to="/order">Review Order</Link>
+                </button>
+            </Cart>
         </div>
     );
 };

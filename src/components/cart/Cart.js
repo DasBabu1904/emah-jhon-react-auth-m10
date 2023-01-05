@@ -1,8 +1,8 @@
 import React from 'react';
 import './Cart.css';
 const Cart = (props) => {
-    const cart = props.cart
-    console.log(cart);
+    const { cart, children } = props
+
     let totalPrice = 0;
     let Shipping = 0;
     let quant = 0;
@@ -28,7 +28,7 @@ const Cart = (props) => {
                 < div className="Button-area">
                     <button className="Cart-area-Button">Clear Cart</button>
                     <br />
-                    <button className="Cart-area-Button">Review Order</button>
+                    {children}
                 </div>
             </div>
         </div >
