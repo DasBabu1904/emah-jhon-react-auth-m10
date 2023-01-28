@@ -5,6 +5,7 @@ import Shop from './components/shop/Shop';
 import { Route, Routes } from 'react-router-dom';
 import Inventory from './components/Inventory/Inventory';
 import Oder from './components/Oder/Oder';
+import LogIn from './components/LogIn/LogIn';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Route path="/order" element={<Oder></Oder>} />
         <Route path="/review" element={<Shop></Shop>} />
         <Route path="/inventory" element={<Inventory></Inventory>} />
-        <Route path="/login" element={<Shop></Shop>} />
+        <Route path="/login" element={<LogIn></LogIn>} />
       </Routes>
     </div>
   );
