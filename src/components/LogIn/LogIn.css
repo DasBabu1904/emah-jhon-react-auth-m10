@@ -35,12 +35,43 @@
     height: 55px;
     left: 526px;
     top: 549px;
-    background-color: #ff9900;
-
+    background: rgba(255, 153, 0, 0.3);
+    cursor: pointer;
     border-radius: 7px;
+}
+
+.form_submit_Button:hover {
+    background: rgba(255, 153, 0, 0.5);
 }
 
 .sign_In_Link_Style {
     color: #FF9900;
     text-decoration: none;
+}
+
+.horizontal_Line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.horizontal_Line_Block {
+    width: 190px;
+}
+
+.LogIn_with_google_button {
+    font-size: 30px;
+    width: 415px;
+    height: 55px;
+    left: 526px;
+    top: 549px;
+    border-radius: 7px;
+    background-color: whitesmoke;
+    border-color: antiquewhite;
+    cursor: pointer;
+}
+
+.LogIn_with_google_button:hover {
+    background-color: darkgrey;
 }
